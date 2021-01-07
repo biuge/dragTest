@@ -1,0 +1,37 @@
+.dropDragTable :global(tr th.drop-over-downward) {
+  border-right: 2px dashed #1890ff;
+}
+.dropDragTable :global(th.drop-over-upward) {
+  border-left: 2px dashed #1890ff;
+}
+
+:global {
+  .ant-table-thead > tr,
+  .ant-table-tbody > tr:nth-child(even) {
+    background: #f3f4f4;
+  }
+}
+
+.dropDragTable {
+  :global {
+    .ant-table-small > .ant-table-content > .ant-table-body {
+      margin: 0;
+    }
+    .ant-table-small > .ant-table-content .ant-table-header {
+      background-color: #e8e8e8;
+      .ant-table-fixed {
+        width: -webkit-fill-available;
+      }
+    }
+    .ant-table-small
+      > .ant-table-content
+      .ant-table-fixed-right
+      .ant-table-header {
+      background-color: #f3f4f4;
+      border-bottom: 1px solid #e8e8e8;
+      .ant-table-fixed {
+        margin-bottom: -1px;
+      }
+    }
+  }
+}
