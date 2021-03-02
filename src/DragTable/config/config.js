@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import getColumnSearchProps from './filterComponents.js';
 
 const Columns = props => {
   return [
@@ -14,7 +15,7 @@ const Columns = props => {
     { title: '订单号10', dataIndex: 'data10', width: '260' },
     { title: '订单号11', dataIndex: 'data11', width: '260' },
     { title: '订单号12', dataIndex: 'data12', width: '260' },
-    { title: '订单号13', dataIndex: 'data133', width: '260' },
+    { title: '订单号13', dataIndex: 'data133', width: '261' },
     {
       title: '操作',
       fixed: 'right',
@@ -24,7 +25,13 @@ const Columns = props => {
         return <div>123</div>;
       },
     },
-  ];
+  ].map(i => {
+    const ext = getColumnSearchProps(i.dataIndex, console.log, console.log);
+    return {
+      ...i,
+      ...ext,
+    };
+  });
 };
 
 export { Columns };
