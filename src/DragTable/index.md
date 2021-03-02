@@ -22,7 +22,6 @@ import {
   Radio,
 } from 'antd';
 import { Columns } from './config/config.js';
-
 const Demo = () => {
   const tableRef = useRef();
   const [form] = Form.useForm();
