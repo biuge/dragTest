@@ -14,7 +14,7 @@ const Columns = props => {
     { title: '订单号10', dataIndex: 'data10', width: '260' },
     { title: '订单号11', dataIndex: 'data11', width: '260' },
     { title: '订单号12', dataIndex: 'data12', width: '260' },
-    { title: '订单号13', dataIndex: 'data13', width: '260' },
+    { title: '订单号13', dataIndex: 'data133', width: '260' },
     {
       title: '操作',
       fixed: 'right',
