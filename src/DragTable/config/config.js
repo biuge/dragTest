@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import getColumnSearchProps from './filterComponents.js';
 
 const Columns = props => {
   return [
@@ -24,7 +25,13 @@ const Columns = props => {
         return <div>123</div>;
       },
     },
-  ];
+  ].map(i => {
+    const ext = getColumnSearchProps(i.dataIndex, console.log, console.log);
+    return {
+      ...i,
+      ...ext,
+    };
+  });
 };
 
 export { Columns };
